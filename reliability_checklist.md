@@ -1,0 +1,6 @@
+# Reliability Checklist for `memo.md` (safety → validation → critique/refine → human sign-off)
+
+1. **Safety check** – `orders_clean` has only order_id, date, region, category, product, quantity, sales and profit: no customer names, phone numbers, addresses or prescriptions, and `memo.md` and the CII blocks quote only region-level aggregates and one region's top-5 order totals, never individual customer data.
+2. **Validation** – `make_memo.py` builds every INR figure and percentage in the memo directly from `pharmeasy.db`, the +122.19% matches `queries.py` section 5 and `metrics_engine.py`, and a script confirmed all 24 memo bullets carry a `[LOW]`/`[MEDIUM]`/`[HIGH]` tag and all 7 template fields are present.
+3. **Critique / refine** – on review I removed any causal claim about *why* Guntur moved (no competitor or festival story), relabelled the "large-basket orders" explanation as a hypothesis in Assumptions, and added the June −28.11% reversal and the flat 700-orders-per-month network total so the +122.19% isn't read as proven growth.
+4. **Human sign-off** – *pending*: a regional lead must call `review_gate_v1(report, "approve", note)` on the Guntur block; until that entry appears in `audit_log.jsonl`, `external_use_allowed` stays `False` and the memo is a draft. (The test harness's Guntur "approve" entry demonstrates the mechanism only.)
