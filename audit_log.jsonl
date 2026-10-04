@@ -1,0 +1,4 @@
+{"timestamp": "2026-10-04T14:53:28+00:00", "run_id": "run-2026-06", "region": "Guntur", "decision": "approve", "reviewer_note": "Numbers tie to queries.py section 5."}
+{"timestamp": "2026-10-04T14:53:28+00:00", "run_id": "run-2026-06", "region": "Tirupati", "decision": "edit", "reviewer_note": "Add note that Tirupati reversed -17.07% in June."}
+{"timestamp": "2026-10-04T14:53:28+00:00", "run_id": "run-2026-06", "region": "Karimnagar", "decision": "reject", "reviewer_note": "Only 22-38 orders/month; too thin to publish."}
+{"timestamp": "2026-10-04T14:53:28+00:00", "run_id": "run-2026-06", "region": "Guntur", "decision": "maybe", "reviewer_note": "", "valid": false}
